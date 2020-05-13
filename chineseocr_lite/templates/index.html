@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset='utf-8'>
+    <script src='https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js'></script>
+</head>
+
+<body>
+<input id='upload' type='file' accept="image/png, image/jpeg" multiple><br>
+<script>
+    $(function () {
+        $('#upload').change(function () {
+            var files = $('#upload')[0].files;
+            var form = new FormData();
+            for (var i = 0; i < files.length; i++) {
+                //插入FormData
+                var file = files[i];
+                form.append('files', file);
+                //显示图片
+                var fileReader = new FileReader();
+                fileReader.readAsDataURL(file);
+                fileReader.onloadend = function (event) {
+                    var src = event.target.result;
+                    $('body').append('<img src=' + src + ' width=200px>');
+                }
+            }
+            $('body').append('<p>请稍候</p>');
+
+            $.ajax({
+                type: 'POST',
+                url: '/ocr',
+                data: form,
+                processData: false,   // 不处理发送的数据
+                contentType: false,   // 不设置请求头
+                success: function (data) {
+                    $('body').append(data);
+                }
+            });
+        })
+    });
+</script>
+</body>
+</html>
