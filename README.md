@@ -1,5 +1,4 @@
-# ctrip
-python3.6 selenium集成开源chineseocr_lite项目破解携程网拖动验证和中文点选验证
+# python3.6 selenium集成开源chineseocr_lite项目破解携程网拖动验证和中文点选验证
 
 1.安装pyhton3.6.3环境并配置环境变量
 
