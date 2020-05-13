@@ -28,4 +28,6 @@ pip install cx-Oracle
 
 5.原chineseocr_lite项目地址(https://github.com/ouyanghuiyu/chineseocr_lite)
 
-6.接口封装案例参考(https://github.com/vba34520/chineseocr_lite)
+6.接口封装可参考案例(https://github.com/vba34520/chineseocr_lite)
+
+7.参考文章(https://editor.csdn.net/md?articleId=106095811)
