@@ -27,3 +27,5 @@ pip install cx-Oracle
 4.本项目在原chineseocr_lite上做过一定修改，封装API接口调用，不需要启动服务
 
 5.原chineseocr_lite项目地址(https://github.com/ouyanghuiyu/chineseocr_lite)
+
+6.接口封装案例参考(https://github.com/vba34520/chineseocr_lite)
